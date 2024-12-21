@@ -11,7 +11,7 @@ function saveTasks() {
 
 
 function renderTasks() {
-  todoList.innerHTML = ''; // Clear current list
+  todoList.innerHTML = ''; 
   tasks.forEach((task, index) => {
     const taskItem = document.createElement('li');
     taskItem.classList.add('list-group-item', 'todo-item');
@@ -49,8 +49,8 @@ function addTask() {
   const taskText = taskInput.value.trim();
   if (taskText) {
     tasks.push({ text: taskText, completed: false });
-    taskInput.value = ''; // Clear input field
-    renderTasks(); // Re-render task list
+    taskInput.value = ''; 
+    renderTasks(); 
   }
 }
 
@@ -81,6 +81,4 @@ taskInput.addEventListener('keypress', (e) => {
 });
 
 
-
-// Initial rendering of the task list
 renderTasks();
